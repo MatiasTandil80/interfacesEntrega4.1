@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
+}
+
+body{
+    margin: 0; /*Porque el body trae un margin por defecto*/
+    padding: 0;
+    display: flex;
+    min-height: 100vh; /*requisito para pedirle al footer que se coloque debajo del body*/
+    background-color:  #04D9D9; /*Color P4 del Figma*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ /*ES EL DIV CONTENEDOR QUE HACE REFERENCIA A LA BURBUJA TRANSPARENTE HORIZONTAL*/
+.aqua{
+    width: 30vw;
+    padding: 2vh;
+    border-radius: 5vw;
+    box-shadow: inset 0 10px 5px  rgba(0,0,0,0.075), /* Sombra interna hacia abajo */
+    0 15px 8px rgba(0,0,0,0.05),                     /* Sombra externa hacia abajo */
+    0 15px 8px rgba(0,0,0,0.05),                     /* Sombra externa hacia abajo */
+    inset 0 -10px 15px #69396F;            /* Sombra interna inferior hacia arriba desde */
+}
+
+/*BARRA CENTRAL CRECIENTE DE COLOR CELESTE*/
+.percent-bar{
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 3vh;
+    opacity: 1;
+    background:#F2EB07;
+    border-radius: 5vw;
+}
+
+
+/*BURBUJA PEQUEÑA SUPERIOR(DE %) QUE VA DE IZQUIERDA(0%) A DERECHA(100%)*/
+.number{
+    position: absolute;                                /*este absolute se debe a que es elemento hijo del percent-bar*/
+    top: -84px;
+    right: -65px;
+    padding: 10px 15px;
+    color: #F2EB07;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    box-shadow: inset 0 10px 5px  rgba(0,0,0,0.075),
+    0 15px 8px rgba(0,0,0,0.05),
+    0 10px 15px rgba(0,0,0,0.05),
+    inset 0 -10px 15px #69396F; /* color anterior rgb(158, 46, 173)*/
+}
+
+
+#id-personaje-loading{
+    position: absolute;
+    top:-500px;
+    scale: 0.6;
+
+}

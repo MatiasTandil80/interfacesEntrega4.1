@@ -1,0 +1,1355 @@
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#contenedor{/*REGLAS PARA EL BODY*/
+  margin: 0;
+  width: 1280px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*****************************************************STYLE.CSS*********************************/
+    
+    #contenedor-total{
+        width: 1280px;
+        height: 3980px;   
+        position: relative;
+        overflow:hidden;
+        display: flex;
+        justify-content: center;  /* Centra horizontalmente el contenedor de 1080*/
+
+    }
+    
+    #contenedor-1080{
+      width: 1080px;
+
+    }
+    
+    #elementos-header{
+      position: fixed;        /* Fija el header en la parte superior */
+      width: 1080px;
+      display: flex;   
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10001;
+    }
+    
+    #paisaje-fondo, #paisaje-fondo2 {
+        width: 1280px;   
+        z-index: 0;
+    
+    }
+    
+    #section-0{
+      width: 1280px;
+      
+      position: absolute;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #section-3{
+      overflow: hidden;
+    }
+
+
+    #header-solo{
+      position: fixed;        /* Fija el header en la parte superior */
+    /*  top: 0px;
+      left: 0px;*/
+      z-index: 501;
+      width: 1280px;
+    }
+    
+     /************************************************************************************/
+    /* Animaciones al boton hambueguesa */
+    #btn-hamburguesa{
+      width: 45px;
+      height: fit-content;
+      border: none;
+      background-color: transparent;
+      z-index: 5010;
+    }
+    
+    #btn-hamburguesa:hover{
+      cursor: pointer;
+      color: var(--color-background-primario);
+      transform: scale(1.2);
+      transition: all 300ms ease-in-out;
+      cursor: pointer;
+    }
+    
+    
+    #btn-hamburguesa div {
+      background: var(--color-background-secundario);
+      display: block;
+      height: 4px;
+      border-radius: 3px;
+      outline: solid 4px var(--color-acento);
+      margin: 7px 0;
+      transition: 0.5s;
+      box-shadow: 3px 5px 0 4px var(--color-acento--drop-shadow); 
+    }
+    
+    #btn-hamburguesa.btn-click div:first-child {
+      transform: translateY(7px) rotate(135deg);
+      box-shadow: unset;
+      box-shadow: 0px -1px 0 4px var(--color-acento--drop-shadow);
+    }
+    
+    .btn-click div:nth-child(2) {
+      transform: scale(0);
+    }
+    
+    #btn-hamburguesa.btn-click div:last-child {
+      transform: translateY(-15px) rotate(-135deg);
+      box-shadow: unset;
+      box-shadow: -1px -1px 0 4px var(--color-acento--drop-shadow);
+    }
+    /* Animaciones al boton hambueguesa */
+    /**********************************************************************************/
+    /*ANIMACION LOGO*/
+    
+    /* Animacion al titulo */
+    /* Animación al logo */
+    #logo-central{ 
+      position: absolute;
+      top: 55px;  /* Posición inicial del logo */
+      left: 50%;
+      transform: translateX(-50%); /* Centrado en el eje X */
+      transition: all 0.3s ease;  /* Suaviza el movimiento */
+      height: 320px;
+      width: 560px;
+      z-index: 1000;
+    }
+    
+    #logo-central.achicar {
+      position: fixed;
+      top: 0; /* Se fija al top */
+      left: 50%;
+      transform: translateX(-50%); /* Centrado en el eje X */
+      height: 91px; /* Puedes ajustar el tamaño cuando se fije */
+      width: auto;  /* Mantener el ancho proporcional */
+      transition: all 0.3s ease;  /* Suaviza el movimiento */
+      z-index: 1000;
+    }
+    /* Animacion al titulo */
+    /*************************************************************************************/
+    .btn-linea{
+      width: 34px;
+      height: 4px;
+      background-color: #F39E46;
+      border: 4px solid white;
+      border-radius: 20px;  
+      box-shadow: 4px 4px 0px #031F73;
+      z-index: 2;
+    }
+    
+    #btn-comprar{
+      width: 200px; /* Ancho del botón */
+      height: 50px; /* Alto del botón */
+      top: 12px;
+      display: flex; /* Usamos flexbox para centrar el texto */
+      justify-content: center; /* Centrar el texto horizontalmente */
+      align-items: center; /* Centrar el texto verticalmente */
+      font-family: 'Lato', sans-serif; /* Fuente Lato */
+      font-weight: 900; /* Lato Black */
+      font-size: 20px; /* Tamaño de la fuente */
+      color: white; /* Color del texto */
+      background-color: #83C252; /* Color de fondo del botón (puedes cambiarlo si quieres) */
+      border: 8px solid white; /* Borde del botón */
+      border-radius: 111px; /* Bordes redondeados (opcional) */
+      box-shadow: 4px 5px 0px #031F73; /* Sombra azul, 4px a la derecha y 5px hacia abajo */
+      /*position:absolute;
+      /*top: 20px;
+      left: 980px;*/
+      z-index: 10001;
+    }
+    
+    #logo-header{
+      height: 86px;
+      width: 150px;
+      
+      z-index: 10001;
+    }
+    #cartel-1 {
+      position: absolute;
+      height: 132px;
+      width: 508px;
+      left: 100px;
+      top: 1020px;
+      /*transform: translate(0%, 0%); /* Mantén la base de transformación */
+      transition: transform 0.5s ease-out; /* Agregamos transición suave */
+    }
+    
+    #cartel-2{
+      position: absolute;
+      height: auto;
+      width: 704px;
+      left: 100px;
+      top: 1190px;
+      transition: transform 0.5s ease-out; /* Agregamos transición suave */
+    }
+    
+
+
+    #pantalla-1{
+      position: absolute;
+      height: 324px;
+      width: 576px;
+      left: 160px;
+      top: 1330px;
+      transition: transform 0.5s ease-out; /* Agregamos transición suave */
+      border-radius: 80px;
+    }
+    
+    #personaje-verde{
+      position: absolute;
+      height: 603px;
+      width: 602px;
+      left: 0px;
+      top: 1491px;
+      transition: transform 0.5s ease-out; /* Agregamos transición suave */
+    }
+    
+    #personaje-celeste{
+      position: absolute;
+      height: 1259px;
+      width: 572px;
+      left: 720px;
+      top: 900px;
+      transition: transform 0.5s ease-out; /* Agregamos transición suave */
+    }
+    
+    #pantalla-2{
+      position: absolute;
+      border-radius: 40px;
+      height: 303px;
+      width: 333px;
+      left: 0px;
+      top: 2174px;
+    }
+    
+    #pantalla-3{
+      position: absolute;
+      border-radius: 40px;
+      height: 303px;
+      width: 333px;
+      left: 373px;
+      top: 2174px;
+    }
+    
+    #pantalla-4{
+      position: absolute;
+      border-radius: 40px;
+      height: 303px;
+      width: 333px;
+      left: 747px;
+      top: 2174px;
+    }
+    /*************************************MOVIMIENTO 3 CARDS**************************************/
+    #container-cards{
+      left: 0;
+    }
+    /* Animación de la card */
+    .card {
+      opacity: 0;
+      transform: translateY(150px); /* Hacemos que las cards se deslicen desde abajo */
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    /* Clase que se añadirá cuando la card se haga visible */
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0); /* Vuelve a su posición original */
+    }
+    
+    /* Añadir retardo a cada card según su índice */
+    .card:nth-child(1).visible {
+      transition-delay: 0.1s; /* 0.3 segundos de retardo para la primera card */
+    }
+    
+    .card:nth-child(2).visible {
+      transition-delay: 0.2s; /* 0.6 segundos de retardo para la segunda card */
+    }
+    
+    .card:nth-child(3).visible {
+      transition-delay: 0.3s; /* 0.9 segundos de retardo para la tercera card */
+    }
+    /*******************************************************************************/
+    #parrafo-pantalla-2{
+      position: absolute;
+      height: auto;
+      width: 333px;
+      left: 0px;
+      top: 2500px;
+    }
+    
+    #parrafo-pantalla-3{
+      position: absolute;
+      height: auto;
+      width: 333px;
+      left: 374px;
+      top: 2500px;
+    }
+    
+    #parrafo-pantalla-4{
+      position: absolute;
+      height: auto;
+      width: 333px;
+      left: 747px;
+      top: 2500px;
+    }
+    
+    #rectangulo-violeta-personajes{
+      position: absolute;
+      height: 1157px;
+      width: 1280px;
+      left: 0px;
+      top: 2830px;
+    }
+    
+    #descubre-el-juego-parrafo{
+      position: absolute;
+      height: 153px;
+      width: 950px;
+      left: 165px;
+      top: 3005px;
+
+    }
+    
+    #personajes-asomados{
+      position: absolute;
+      height: 767px;
+      width: 1280px;
+      left: 0px;
+      top: 3180px;
+      scale: 115%;
+      transition: transform 0.1s ease-out; /* Suaviza el movimiento */
+    }
+    
+    #btn-descarga-numberblocks{
+      width: 540px; /* Ancho del botón */
+      height: 66px; /* Alto del botón */
+      display: flex; /* Usamos flexbox para centrar el texto */
+      justify-content: center; /* Centrar el texto horizontalmente */
+      align-items: center; /* Centrar el texto verticalmente */
+      font-family: 'Lato', sans-serif; /* Fuente Lato */
+      font-weight: 900; /* Lato Black */
+      font-size: 20px; /* Tamaño de la fuente */
+      color: white; /* Color del texto */
+      background-color: #83C252; /* Color de fondo del botón (puedes cambiarlo si quieres) */
+      border: 8px solid white; /* Borde del botón */
+      border-radius: 111px; /* Bordes redondeados (opcional) */
+      box-shadow: 4px 5px 0px #031F73; /* Sombra azul, 4px a la derecha y 5px hacia abajo */
+      position:absolute;
+      top: 3220px;
+      left: 370px;
+      z-index: 2;
+    }
+    
+   
+    
+    /***************************ANIMACION PERSONAJES PARRAFOS******************************************/
+
+    #section-4 #img-mas-amigos-mas-diversion{
+      /*background-color: #02187E;  */  
+      margin: 5%;
+      margin-right: 35%;
+    }
+
+    #section-4{
+     /* background-color: #5E5E5D;*/
+      display: flex;
+      flex-direction: column;   
+      align-items: flex-end;
+      height: 5500px;
+    }
+
+    #id-contenedor{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      height: 5100px;
+     /* background-color: #8F6AA6;*/
+      
+    }
+
+    #columna-izquierda{
+     /* background-color: #000000;*/
+      width: 500px;
+      text-align: center;
+      
+    }
+    
+    #columna-izquierda img{
+      position: sticky;
+      top: 20%;
+      opacity: 1; /* Inicialmente la imagen es completamente visible */
+      transition: opacity 0.2s ease, transform 0.2s ease; /* Transición más rápida para la opacidad y zoom */
+}
+
+#columna-izquierda img.zoom {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+}
+
+#columna-izquierda img.fade-out {
+  opacity: 0; /* Hace que la imagen se desvanezca */
+}
+    
+    
+    
+    
+
+    #columna-derecha{
+
+     /* background-color: #02187E;*/
+      margin-right: 180px;
+    }
+
+
+
+    #columna-parrafos{
+     
+      /*left: 713px;
+      top: 4377px;*/
+      width: 467px;
+      height: 4884px;
+    }
+
+   /*********************************RECTANGULO AMARILLO**************************************************/
+   #contenedor-total-2{
+    width: 1280px;
+    height: 5155px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente el contenedor de 1080*/   
+    
+}
+
+  #contenedor-1080-2{
+    width: 1080px;
+    height: 500px;
+    
+   
+  }
+
+    #rectangulo-amarillo{
+      position: absolute;
+      left: 0px;      
+    
+    }
+    
+    #mira-el-video-parrafo{
+      position: absolute;
+      height: 171px;
+      margin-top: 15%;
+      left: 100px;
+     
+    }
+    
+    #pantalla-5{
+      position: absolute;
+      height: 452px;
+      width: 804px;
+      left: 200px;
+      margin-top: 55%;      
+      border-radius: 50px;
+      border: 30px solid white;
+      transition: transform 2s ease-out; /* Suaviza el movimiento */
+    }
+    
+    #personaje-amarillo-mano-levantada{
+      position: absolute;
+      height: 989px;
+      width: 638px;
+      left: 410px;
+      margin-top: 25%;
+      transition: transform 1s ease-in; /* Suaviza el movimiento */
+    }
+    
+
+
+/********************************************************EXPERIMENTA EN 3D******************************************************************/    
+
+
+#experimenta-parrafo{
+      position: absolute;
+      height: 285px;
+      width: 746px;
+      left: 102px;
+      top: 1690px;
+     
+    }
+    
+    #en-numberblocks-parrafo{
+      position: absolute;
+      height: 190px;
+      width: 467px;
+      left: 100px;
+      top: 2040px;
+     
+    }    
+   
+
+    /* El contenedor del <model-viewer> */
+    model-viewer {
+      position: absolute;
+      width: 700px;      /* Máximo de 500px de ancho */
+      height: 700px;     /* Máximo de 500px de alto */
+      left: 599px;
+      top: 1521px;
+    }
+
+/*********************************************************CASILLEROS DE COLORES************************************************************/    
+
+    #section-7 {
+      position: absolute;      
+      left: 0px;
+      top: 2350px;
+    }
+
+
+    #id-1rojo{
+      position: absolute;
+      left: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; /* Agregamos transiciones suaves */
+  }
+  
+  #id-1rojo:hover, #id-2marron:hover, #id-3amarillo:hover, #id-4verde:hover,#id-5celeste:hover,
+  #id-6violeta:hover, #id-7arcoiris:hover, #id-8rosa:hover, #id-9gris:hover, #id-10blanco:hover{
+      transform: scale(1.1); 
+      filter: brightness(1.4); 
+  }
+  
+  #id-2marron{
+      position: absolute;
+      left: 280px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-3amarillo{
+      position: absolute;
+      left: 547px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  #id-4verde{
+      position: absolute;
+      left: 808px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-5celeste{
+      position: absolute;
+      left: 1068px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-6violeta{
+      position: absolute;
+      left: 2px;
+      top: 402px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-7arcoiris{
+      position: absolute;
+      left: 281px;
+      top: 404px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-8rosa{
+      position: absolute;
+      left: 548px;
+      top: 404px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-9gris{
+      position: absolute;
+      left: 814px;
+      top: 404px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+  
+  #id-10blanco{
+      position: absolute;
+      left: 1064px;
+      top: 404px;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease; 
+  }
+
+/*******************************************************************************************************************************************/
+
+    #quieres-pregunta{
+      position: absolute;
+      height: 171px;
+      width: 816px;
+      left: 60px;
+      top: 3269px;
+      z-index: 1;
+    
+    }
+    
+    .suscribirse{
+      position: absolute;
+      height: 100px;
+      width: 780px;
+      left: 100px;
+      top: 3495px;
+      z-index: 1;
+      background-color: white;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;      
+      box-shadow: 4px 5px 0px #031F73; /* Sombra azul, 4px a la derecha y 5px hacia abajo */
+    }
+
+    .suscribirse input{
+      width: 500px;
+      height: 81px;
+      border-radius: 50px 0 0 50px;
+      border: none;
+      margin-right: 5px;
+      background-color: #ECECEC;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400; /* Esto asegura que se use el estilo Regular */
+      font-size: 20px;
+      padding-left: 43px;
+    }
+
+   
+
+    .suscribirse .btn-suscribirse{
+      width: 200px;
+      height: 81px;
+      border-radius: 0 50px 50px 0;
+      border: none;
+      background-color: #83C252;
+      margin-left: 5px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900; /* Lato Black */
+      font-size: 20px;
+      color: white;
+
+      
+    }
+
+
+    
+    #al-inscribirse-parrafo{
+      position: absolute;
+      /*height: 95px;*/
+      width: 578px;
+      left: 100px;
+      top: 3642px;
+      z-index: 10;
+     
+    }
+    
+    #estampilla-teen{
+      position: absolute;
+      height: 145px;
+      width: 231px;
+      left: 100px;
+      top: 3750px;
+      z-index: 10;
+      
+    }
+    
+    #paisaje-fondo3{
+      position: absolute;
+      height: 1296px;
+      width: 1280px; /*figma no coincide. Dice 14 mil.....*/
+      left: 0px;
+      top: 3260px;
+      z-index: 0;
+
+    }
+    
+    #rectangulo-negro-footer{
+      position: absolute;
+      height: 80px;
+      width: 1280px;
+      left: 0px;
+      top: 4558px;
+      z-index: 1;
+      border: 1px solid black;
+    }
+    
+    #marcas-footer{
+      position: absolute;
+      left: 100px;
+      top: 4563px;
+      width: 1080px;
+      height: 75px;
+      z-index: 2;
+    }
+    
+    #footer-gris{
+      position: absolute;
+      height: 515px;
+      width: 1280px;
+      left: 0px;
+      top: 4640px;
+      z-index: 1;
+      
+    }
+    
+    #parrafo-final{
+      position: absolute;
+      left: 100px;
+      top: 4700px;
+      color: white;
+      width: 820px;
+      height: 361px;
+      z-index: 2;
+      font-size: 20px; /* Tamaño de la fuente */
+      font-family: 'Lato', sans-serif; /* Definir la fuente Lato */
+      
+    }
+    
+    #redes-sociales-footer{
+      position: absolute;
+      left: 100px;
+      top: 5080px;
+      width: 212px;
+      height: 41px;
+      z-index: 2;
+    }
+
+    #ss-hombre{
+      position: absolute;
+      background: url(elementos/spritesheethombre.png) left center;
+      height: 280px;
+      width: 260px;
+      left: 945px;
+      top: 4605px;
+      z-index: 2000;
+      scale: 0.3;
+      border-radius: 20px;
+      border: 10px solid violet;
+      animation: walk 1s steps(8) infinite;
+    }
+
+    /* Animación para mover el fondo a través de los fotogramas */
+    @keyframes walk {
+      0% {
+        background-position: 0 0; /* Primer fotograma */
+      }
+      100% {
+        background-position: -2080px 0; /* Último fotograma (dependiendo del tamaño del spritesheet) */
+      }
+    }
+
+    #ss-hombre2 {
+      position: absolute;
+      background: url(elementos/secuenciahombre.png) no-repeat;
+      height: 136px;   /* Altura de cada fotograma */
+      width: 137.17px; /* Ancho de cada fotograma */
+      left: 1011px;
+      top: 4780px;
+      z-index: 2000;
+      scale: 0.59;
+      border-radius: 20px;
+      border: 6px solid green;
+      /* Animación que mueve el fondo */
+      animation: moveHombrefrontal 1s steps(6) infinite;
+    }
+    
+    /* Animación para mover el fondo a través de los fotogramas */
+    @keyframes moveHombrefrontal {
+      0% {
+        background-position: 0 0; /* Primer fotograma */
+      }
+      100% {
+        background-position: -823px 0; /* Último fotograma (-137.17px * 6 = -823px) */
+      }
+    }
+    
+
+
+    #ss-chica {
+      position: absolute;
+      background: url(elementos/secuenciachica.jpg) no-repeat;
+      height: 360px;   /* Altura de cada fotograma */
+      width: 360px;    /* Ancho de cada fotograma */
+      left: 893px;
+      top: 4760px;
+      z-index: 2000;
+      transform: scaleX(-1);
+      scale: 0.22;
+      border-radius: 30px;
+      border: 12px solid yellow;
+      /* Animación que mueve el fondo */
+      animation: moveChica 1s steps(8) infinite;
+    }
+    
+    /* Animación para mover el fondo a través de los fotogramas */
+    @keyframes moveChica {
+      0% {
+        background-position: 0 0; /* Primer fotograma */
+      }
+      100% {
+        background-position: -2880px 0; /* Último fotograma (-360px * 8 = -2880px) */
+      }
+    }
+    
+    #ss-ocho{
+      position: absolute;
+      background: url(numeros/tira\ 8.jpeg) no-repeat;
+      height: 360px;   /* Altura de cada fotograma */
+      width: 180px;    /* Ancho de cada fotograma */
+      left: 989px;
+      top: 4920px;
+      z-index: 2000;
+      clip-path: inset(0 0 0 20px);
+      scale: 0.50;
+      /* Animación que mueve el fondo */
+      animation: moverOcho 1s steps(6) infinite;
+    }
+    
+    /* Animación para mover el fondo a través de los fotogramas */
+    @keyframes moverOcho {
+      0% {
+        background-position: 0 0; /* Primer fotograma */
+      }
+      100% {
+        background-position: -1222px 0; /* Último fotograma (-360px * 8 = -2880px) */
+      }
+    }
+
+    #personaje-izquierdo-footer{
+      position: absolute;
+      left: 65px;
+      top: 4050px;
+      width: 480px;
+      height: 480px;
+      z-index: 2;
+    }
+    
+    #personaje-centro-footer{
+      position: absolute;
+      left: 407px;
+      top: 4010px;
+      width: 509px;
+      height: 509px;
+      z-index: 2;
+    }
+    
+    #personaje-derecho-footer{
+      position: absolute;
+      left: 756px;
+      top: 3600px;
+      width: 561px;
+      height: 997px;
+      z-index: 2;
+    }
+    
+    #piso-paisaje-footer{
+      position: absolute;
+      left: 0px; /*figma dice position x 1280.... */
+      top: 4170px;
+      width: 1280px;
+      height: 389px;
+      z-index: 1;
+    }
+    
+
+/*****************************************************ANIMACION NUBES*********************************************************************/
+
+/* Nube 1 */
+#nube-1-footer {
+  position: absolute;
+  left: -387px;  /* Inicia fuera de la pantalla a la izquierda */
+  top: 3970px;
+  width: 387px;
+  height: 181px;
+  z-index: 2;
+  animation: moverNube1 20s infinite linear;
+}
+
+/* Nube 2 */
+#nube-2-footer {
+  position: absolute;
+  left: -265px;  /* Inicia fuera de la pantalla a la izquierda */
+  top: 3630px;
+  width: 265px;
+  height: 124px;
+  z-index: 2;
+  animation: moverNube2 35s infinite linear;
+}
+
+/* Nube 3 */
+#nube-3-footer {
+  position: absolute;
+  left: -387px;  /* Inicia fuera de la pantalla a la izquierda */
+  top: 3700px;
+  width: 387px;
+  height: 181px;
+  z-index: 2;
+  animation: moverNube3 25s infinite linear;
+}
+
+/* Animación para la Nube 1 */
+@keyframes moverNube1 {
+  0% {
+    left: -387px; /* Empieza fuera de la pantalla a la izquierda */
+  }
+  100% {
+    left: 100%;  /* Mueve la nube hasta el final de la pantalla */
+  }
+}
+
+/* Animación para la Nube 2 */
+@keyframes moverNube2 {
+  0% {
+    left: -265px; /* Empieza fuera de la pantalla a la izquierda */
+  }
+  100% {
+    left: 100%;  /* Mueve la nube hasta el final de la pantalla */
+  }
+}
+
+/* Animación para la Nube 3 */
+@keyframes moverNube3 {
+  0% {
+    left: -387px; /* Empieza fuera de la pantalla a la izquierda */
+  }
+  100% {
+    left: 100%;  /* Mueve la nube hasta el final de la pantalla */
+  }
+}
+
+
+    /**************************************PARALLAX HERO**********************************/
+
+  #hero img {
+    position: absolute;
+  }
+    
+
+  #hero img:nth-child(2) {
+    height: 114px;
+    width: 249px;
+    top:718px;
+    left:282px;
+    opacity: 0;    
+    animation: animacion_1 700ms ease-out forwards;
+  }
+  
+  @keyframes animacion_1 {
+    0% {
+      transform: translate(-50%, 100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 3%);
+    }
+  }
+  
+  /* Edificio de la izquierda */
+  #hero img:nth-child(3) {
+    height: 867px;
+    width: 560px;
+    top: -30px;
+    left: -73px;
+    z-index: 1;
+    opacity: 0;
+    animation: animacion_2 800ms ease-out forwards;
+  }
+  
+  @keyframes animacion_2 {
+    0% {
+      transform: translate(-200%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(-15%, 4%);
+    }
+  }
+  
+  /* Edificio de la derecha */
+  #hero img:nth-child(4) {
+    height: 78px;
+    width: 145px;
+    top: 790px;
+    left:129px;
+    z-index: 2;
+    opacity: 0;
+    animation: animacion_3 900ms ease-out forwards;
+  }
+  
+  @keyframes animacion_3 {
+    0% {
+      transform: translate(200%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(10%, 4%);
+    }
+  }
+  
+  /* Spiderman blanco */
+  #hero img:nth-child(5) {
+    top: 820px;
+    left:400px;
+    width: 155px;
+    height: 102px;
+    z-index: 3;
+    transform: translate(-500%, -320%);
+    animation: animacion_4 2s ease-in forwards;
+  }
+  
+  @keyframes animacion_4 {
+    0% {
+      transform: translate(-500%, -320%);
+    }
+  
+    100% {
+      transform: translate(-130%, -2%);
+    }
+  }
+  
+  /* arbol 2 */
+  #hero img:nth-child(6) {
+    height: 673px;
+    width: 434px;
+    top: 106px;
+    left: 881px;
+    z-index: 4;
+    animation: animacion_5 3s ease-in forwards;
+  }
+  
+  @keyframes animacion_5 {
+    0% {
+      transform: translate(220%, -200%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+  
+    /* Telaraña derecha */
+  #hero img:nth-child(7) {
+    top:629px;
+    left:1029px;
+    width:191px;
+    height: 63px;
+    z-index: 1;
+    opacity: 0; 
+    animation: animacion_6 2s ease-in forwards 2s;
+  }
+  
+  @keyframes animacion_6 {
+    0% {
+      transform: translate(77%, -12%);
+    }
+  
+    100% {
+       opacity: 1; 
+      transform: translate(0%, 0%);
+      
+    }
+  }
+  
+  /* Spiderman original */
+  #hero img:nth-child(8) {
+    width: 244px;
+    height: 107px;
+    top:657px;
+    left: 1081px;
+    z-index: 3;
+    animation: animacion_7 1s ease-in forwards;
+  }
+  
+  @keyframes animacion_7 {
+    0% {
+      /* opacity: 0; */
+      transform: translate(150%, -12%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+  
+    }
+  }
+
+  #hero img:nth-child(9) {
+    position: absolute;
+    height: 430px;
+    width: 278px;
+    top: 278px;
+    left:1080px;
+    z-index: 2;
+    animation: animacion_8 1s ease-in forwards;
+  }
+  
+  @keyframes animacion_8 {
+    0% {
+      /* opacity: 0; */
+      transform: translate(74%, -56%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+  
+    }
+  }
+  
+  
+  #hero img:nth-child(10) {
+    position:absolute;
+    width: 66px;
+    height: 56px;
+    top:737px;
+    left: 1035px;
+    z-index: 5;
+    animation: piedra 2s ease-in forwards;
+  }
+  
+  @keyframes piedra {
+    0% {
+
+      transform: translate(526%, -156%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+  
+    }
+  }
+
+  #hero img:nth-child(11) {
+    position:absolute;
+    width: 113px;
+    height: 74px;
+    top:737px;
+    left: 1072px;
+    z-index: 6;
+    animation: animacion_9 2.5s ease-in forwards;
+  }
+  
+  @keyframes animacion_9 {
+    0% {
+      /* opacity: 0; */
+      transform: translate(740%, -506%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+  
+    }
+  }
+  #hero img:nth-child(12) {
+    position:absolute;
+    width: 59px;
+    height: 35px;
+    top:787px;
+    left: 1043px;
+    z-index: 7;
+    animation: animacion_10 3s ease-in forwards;
+  }
+  
+  @keyframes animacion_10 {
+    0% {
+      /* opacity: 0; */
+      transform: translate(440%, -103%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+  
+    }
+  }
+
+  #hero img:nth-child(13) {
+    
+    width: 240px;
+    height: 315px;
+    top:527px;
+    left: 411px;
+    bottom:0px;
+    transform: rotate(-6.51deg);
+    z-index: 3;
+    animation: animacion_11 3s ease-in forwards;
+  }
+  
+  @keyframes animacion_11 {
+    0% {
+      opacity: 0;     
+      transform: translate(-200%, -153%)  scale(0%);
+    }
+  
+    100% {
+      opacity: 1;     
+      transform: translate(0%, 0%) scale(100%);  
+    }
+  }
+
+  #hero img:nth-child(14) {
+    width: 197px;
+    height: 270px;
+    top:423px;
+    left: 548px;
+    transform: rotate(-6.72deg);
+    z-index: 2;
+    animation: animacion_personaje_naranja 3.5s ease-in forwards;
+  }
+  
+  @keyframes animacion_personaje_naranja {
+    0% {
+      opacity: 0;
+     
+      transform: translate(100%, -200%)  scale(0%);
+    }
+  
+    100% {
+      opacity: 1;
+     
+      transform: translate(0%, 0%) scale(100%);
+  
+    }
+  }
+
+  #hero img:nth-child(15) {
+    position:absolute;
+    width: 174px;
+    height: 384px;
+    top:338px;
+    left: 702px;
+    transform: rotate(8.73deg);
+    z-index: 1;
+    animation: animacion_personaje_amarillo 4s ease-in forwards;
+  }
+  
+  @keyframes animacion_personaje_amarillo {
+    0% {
+      opacity: 0;
+     
+      transform: translate(500%, -200%)  scale(0%);
+    }
+  
+    100% {
+      opacity: 1;
+     
+      transform: translate(0%, 0%) scale(100%);
+  
+    }
+  }
+
+  /****************************ASIDE NAV BAR******************************************/
+  #navbar{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-110%);
+    z-index: 30;
+    
+
+  }
+  
+  #navbar li{
+    background-color: var(--color-background-secundario);
+    transform: translateX(0%);
+    transition: transform 300ms ease-out;
+    border-right: 6px solid var(--color-acento);
+    border-bottom: 6px solid var(--color-acento);
+    transition: all 400ms linear;
+    box-shadow: 4px 5px 0px #031F73; /* Sombra azul, 4px a la derecha y 5px hacia abajo */
+  }
+  
+  #navbar li:first-child{
+    border-top: 6px solid var(--color-acento);
+  }
+  
+  #navbar li:last-child{
+    border-radius: 0px 0 10px 0;
+  }
+  #navbar li a {
+    display: block;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+      font-weight: 900; /* Lato Black */
+      font-size: 20px; /* Tamaño de la fuente */
+      color: white; /* Color del texto */
+     
+  }
+  
+  #navbar i{
+    padding-right: 1rem;
+  }
+  
+  
+  /* Transicion mostrar/ocultar items */
+  #navbar li.showElement { transform: translateX(110%); }
+  /* Transiciones ocultar items */
+  #navbar li:nth-child(1) { transition-delay: 250ms; }
+  #navbar li:nth-child(2) { transition-delay: 200ms; }
+  #navbar li:nth-child(3) { transition-delay: 150ms; }
+
+  /* Transiciones ocultar items */
+  /* Transiciones mostrar items */
+  #navbar li.showElement:nth-child(1) { transition-delay: 50ms; }
+  #navbar li.showElement:nth-child(2) { transition-delay: 100ms; }
+  #navbar li.showElement:nth-child(3) { transition-delay: 150ms; }
+
+  /* Transiciones mostrar items */
+  /* Transicion mostrar/ocultar items */
+
+
+  /**********************VARIABLES****************************************/
+  :root{
+    /* Variables relacionadas a los colores */
+    --color-background-primario: #FFFFFF;
+    --color-background-secundario: #F39E46;
+    --color-background-duende: #8F6AA6;
+    --color-background-oscuro: #000000;
+    --color-acento: #FFFFFF;
+    --color-acento--drop-shadow: #02187E;
+    --color-background-footer-1: #242424;
+    --color-background-footer-2: #5E5E5D;
+    --color-shadow-box-1: #00000015;
+    
+    /* Variables relacionadas a la letra */
+    --custom-font-family: 'Lato', sans-serif;
+    --custom-font-weight-regular: 400;
+    --custom-font-weight-medium: 700;
+    --custom-font-weight-high: 900;
+  }
